@@ -3,9 +3,9 @@ function calculateBudget() {
   const duration = document.getElementById("duration").value;
 
   if (postsPerDay > 0 && duration > 0) {
-    const onlyManagementCost = 150; // R$150 por perfil, 1 perfil
+    const onlyManagementCost = 170; // R$170 por perfil, 1 perfil
     const numberOfProfiles = 3;
-    const managementCost = onlyManagementCost * numberOfProfiles; // R$150 por perfil, 3 perfis
+    const managementCost = onlyManagementCost * numberOfProfiles; // R$170 por perfil, 3 perfis
     const trafficCostPerPostPerDay = 13;
     const totalTrafficCost = postsPerDay * trafficCostPerPostPerDay * duration;
 
