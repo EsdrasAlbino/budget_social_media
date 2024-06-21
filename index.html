@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Orçamento de Gerenciamento e Tráfego Pago</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Orçamento de Gerenciamento e Tráfego Pago</h1>
+
+      <form id="budgetForm">
+        <h2>Gerenciamento dos Perfis de Instagram</h2>
+        <p>Valor por perfil: <strong>R$150</strong>/mês</p>
+        <p><strong>Total para 3 perfis: R$450</strong>/mês</p>
+        <p>Descrição do serviço de gerenciamento de perfil:</p>
+        <ul>
+          <li>
+            <strong>Postagem de Imagens:</strong> Garantimos a publicação
+            regular de conteúdo visual atrativo, utilizando as imagens
+            fornecidas pelo cliente, para manter o perfil ativo e engajado.
+          </li>
+          <li>
+            <strong>Copywriting:</strong> Produzimos textos envolventes e
+            persuasivos que complementam as imagens, destacando os pontos fortes
+            da sua marca e estimulando a interação com o público.
+          </li>
+        </ul>
+
+        <h2>Tráfego Pago</h2>
+        <p>
+          Valor por post promovido: <strong>R$13</strong>. Sendo
+          <strong>R$11</strong> investido exclusivamente em tráfego pago.
+        </p>
+        <p>Descrição do serviço de tráfego pago:</p>
+        <ul>
+          <li>
+            <strong>Segmentação de Público:</strong> Utilizamos ferramentas
+            avançadas de segmentação para direcionar os posts promovidos para o
+            público-alvo mais relevante, aumentando a eficácia da campanha.
+          </li>
+          <li>
+            <strong>Análise de Resultados:</strong> Monitoramos o desempenho das
+            campanhas em tempo real, ajustando a segmentação e o conteúdo
+            conforme necessário para otimizar os resultados.
+          </li>
+        </ul>
+        <label for="postsPerDay">Número de posts promovidos por dia:</label>
+        <input
+          type="number"
+          id="postsPerDay"
+          name="postsPerDay"
+          min="1"
+          required
+        />
+
+        <label for="duration">Duração da promoção (em dias):</label>
+        <input type="number" id="duration" name="duration" min="1" required />
+
+        <button type="button" onclick="calculateBudget()">
+          Calcular Orçamento
+        </button>
+      </form>
+
+      <div id="result">
+        <h2>Total Geral</h2>
+        <p id="totalBudget"></p>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
